@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jimmy | Travel & Hospitality</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#f4f7fb;
+color:#222;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+/* HERO SECTION */
+
+header{
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content{
+max-width:850px;
+animation:fadeIn 2s ease;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:20px;
+letter-spacing:2px;
+}
+
+.hero-content p{
+font-size:1.3rem;
+margin-bottom:30px;
+}
+
+.hero-buttons a{
+display:inline-block;
+padding:14px 30px;
+margin:10px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn-primary{
+background:#0d6efd;
+color:white;
+}
+
+.btn-secondary{
+background:white;
+color:#222;
+}
+
+.hero-buttons a:hover{
+transform:translateY(-5px);
+}
+
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+background:white;
+padding:18px;
+display:flex;
+justify-content:center;
+gap:25px;
+box-shadow:0 2px 12px rgba(0,0,0,0.1);
+z-index:999;
+}
+
+nav a{
+text-decoration:none;
+font-weight:bold;
+color:#222;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#0d6efd;
+}
+
+/* GENERAL SECTION */
+
+section{
+padding:90px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.7rem;
+margin-bottom:50px;
+position:relative;
+}
+
+.section-title::after{
+content:'';
+width:80px;
+height:4px;
+background:#0d6efd;
+display:block;
+margin:15px auto;
+border-radius:10px;
+}
+
+/* ABOUT */
+
+.about-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about-container img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.about-text{
+font-size:1.05rem;
+}
+
+/* QUALIFICATION + SKILLS */
+
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.skill-box{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.skill-box:hover{
+transform:translateY(-8px);
+}
+
+/* PROJECTS */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 18px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.project-card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.rotate-image{
+transform:rotate(-90deg);
+height:320px;
+object-fit:cover;
+}
+
+.project-content{
+padding:20px;
+}
+
+.project-content h3{
+margin-bottom:15px;
+}
+
+/* CONTACT */
+
+.contact-box{
+background:white;
+max-width:750px;
+margin:auto;
+padding:40px;
+border-radius:20px;
+box-shadow:0 5px 18px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.contact-box p{
+margin:15px 0;
+font-size:1.05rem;
+}
+
+/* PAYMENT */
+
+.payment-box{
+margin-top:40px;
+}
+
+.payment-box img{
+width:220px;
+border-radius:12px;
+border:3px solid #ddd;
+transition:0.9s;
+}
+
+.payment-box img:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
+/* SCROLL ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:2.8rem;
+}
+
+.about-container{
+grid-template-columns:1fr;
+}
+
+nav{
+flex-wrap:wrap;
+gap:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<header>
+
+<div class="hero-content">
+
+<h1>Jimmy Wangchok</h1>
+
+<p>
+Travel & Tourism Student | Hospitality Enthusiast | Future Entrepreneur
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="btn-primary">
+Explore My Journey
+</a>
+
+<a href="#contact" class="btn-secondary">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="#about">About</a>
+
+<a href="#qualification">Qualifications</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<!-- ABOUT -->
+
+<section id="about" class="reveal">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<div class="about-container">
+
+<img src="profile.jpg" alt="Jimmy Profile">
+
+<div class="about-text">
+
+<p>
+Hello, I am Jigmat Wangchok, also known as Jimmy.
+I am a Travel and Tourism Management student with experience in hospitality operations,
+property management, guest handling, and event support.
+</p>
+
+<br>
+
+<p>
+I completed my graduation from University Institute of Hotel and Tourism Management,
+Panjab University, Chandigarh.
+Originally from Khaltse, Leh-Ladakh, I aim to build my own travel and hospitality business in the future.
+</p>
+
+<br>
+
+<p>
+My long-term vision is to build a modern tourism and hospitality brand connected with real travel experiences.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- QUALIFICATION -->
+
+<section id="qualification" class="reveal">
+
+<h2 class="section-title">
+Qualifications
+</h2>
+
+<div class="skills-container">
+
+<div class="skill-box">
+
+<h3>Graduation & Post Graduation</h3>
+
+<p>
+Bachelor's Degree in Travel & Tourism Management(2021-2025)
+</p>
+
+<p>Master's in Travel and Tourism Management(persuing)
+</p>
+
+<p>
+University Institute of Hotel and Tourism Management
+</p>
+
+<p>
+Panjab University, Chandigarh
+</p>
+
+</div>
+
+<div class="skill-box">
+
+<h3>Schooling</h3>
+
+<p>
+Government Higher Secondary School
+</p>
+
+<p>
+Khaltse, Leh-Ladakh
+</p>
+
+</div>
+
+<div class="skill-box">
+
+<h3>Special Interests</h3>
+
+<p>Hospitality Management</p>
+
+<p>Travel Operations</p>
+
+<p>Tourism Business Development</p>
+
+</div>
+
+<div class="skill-box">
+
+<h3>Computer Science</h3>
+
+<p> National Institute of Electronics and Information Technology</p>
+
+<p> Sec-30B, Chandigarh,</p>
+
+<p> Course: O-Level(1 year course),roll-no 133(Batch-132)persuing</p>
+
+</div>
+</br>
+</br>
+</br>
+</br>
+<div class="skill-box">
+<p>
+Build a tourism and hospitality business connected with premium travel experiences across Ladakh and beyond.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="reveal">
+
+<h2 class="section-title">
+Projects & Experience
+</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<img src="project1.jpg" alt="Project 1">
+
+<div class="project-content">
+
+<h3>Thomas Cook India — 2022</h3>
+
+<p>
+Worked during Khelo India Youth Games under KVEE Events.
+Learned communication, guest handling, and information coordination.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="project2.jpg" alt="Project 2">
+
+<div class="project-content">
+
+<h3>World Tourism Day — 2023</h3>
+
+<p>
+Worked with organizing and decoration teams for event coordination and management.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="rainbowradientimage.jpg" alt="Project 3">
+
+<div class="project-content">
+
+<h3>Pangong Manor Internship — 2023</h3>
+
+<p>
+Served as Resort Manager and Property Caretaker in Merak village near Pangong Lake.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="Falconscottage1.jpg" alt="Project 4" class="rotate-image">
+
+<div class="project-content">
+
+<h3>Falcon Cottages — 2024</h3>
+
+<p>
+Managed hospitality operations and handled over 600+ guests during tourism season.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="reveal">
+
+<h2 class="section-title">
+Skills
+</h2>
+
+<div class="skills-container">
+
+<div class="skill-box">
+
+<h3>Technical Skills</h3>
+
+<p>
+MS Excel, MS Word, LibreOffice, Basic Web Development
+</p>
+
+</div>
+
+<div class="skill-box">
+
+<h3>Hospitality Skills</h3>
+
+<p>
+Guest Handling, Team Coordination, Property Management
+</p>
+
+</div>
+
+<div class="skill-box">
+
+<h3>Creative Skills</h3>
+
+<p>
+Sketching, Drawing, Adaptability
+</p>
+
+</div>
+
+<div class="skill-box">
+
+<h3>Sports</h3>
+
+<p>
+Cricket, Football, Badminton
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="reveal">
+
+<h2 class="section-title">
+Contact
+</h2>
+
+<div class="contact-box">
+
+<p>
+<strong>Email:</strong>
+bestofclashers458@gmail.com
+</p>
+
+<p>
+<strong>LinkedIn:</strong>
+Jigmat Wangchok
+</p>
+
+<p>
+<strong>Phone:</strong>
++91 8899389979
+</p>
+
+<div class="payment-box">
+
+<h3>Support / Pay Me</h3>
+
+<p>
+Scan or Tap to Pay
+</p>
+
+<a href="upi://pay?pa=jigmatwangchuk47@okaxis&am=10&cu=INR">
+
+<img src="gpayqr.png" alt="GPay QR">
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Jimmy Wangchok | Future Travel & Hospitality Brand
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+
+let reveals = document.querySelectorAll('.reveal');
+
+for(let i = 0; i < reveals.length; i++){
+
+let windowHeight = window.innerHeight;
+
+let revealTop = reveals[i].getBoundingClientRect().top;
+
+let revealPoint = 120;
+
+if(revealTop < windowHeight - revealPoint){
+
+reveals[i].classList.add('active');
+
+}
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
